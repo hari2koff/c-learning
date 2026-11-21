@@ -1,0 +1,64 @@
+// String - Word replace
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str[101] = "I like Java. Java is powerful.";
+    char rep_word[21] = "Java";
+    char new_word[21] = "Python";
+    char new_str[101];
+
+    int i = 0;  // Original string index
+    int j = 0;  // New string index
+    int k;
+
+    int rep_len = strlen(rep_word);
+    int new_len = strlen(new_word);
+
+    while (str[i] != '\0')
+    {
+        k = 0;
+
+        // Check whether the word matches
+        while (k < rep_len && str[i + k] == rep_word[k])
+        {
+            k++;
+        }
+
+        // Check for a complete word match
+        if (k == rep_len &&
+            (str[i + k] == ' ' ||
+             str[i + k] == '\0' ||
+             str[i + k] == '.' ||
+             str[i + k] == ',' ||
+             str[i + k] == '!' ||
+             str[i + k] == '?'))
+        {
+            // Copy replacement word
+            for (int n = 0; n < new_len; n++)
+            {
+                new_str[j] = new_word[n];
+                j++;
+            }
+
+            // Skip the original word
+            i += rep_len;
+        }
+        else
+        {
+            // Copy original character
+            new_str[j] = str[i];
+            i++;
+            j++;
+        }
+    }
+
+    // End the new string
+    new_str[j] = '\0';
+
+    printf("Original string: %s\n", str);
+    printf("Modified string: %s\n", new_str);
+
+    return 0;
+}

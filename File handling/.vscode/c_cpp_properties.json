@@ -1,0 +1,36 @@
+{
+    "configurations": [
+        {
+            "name": "Win32_1",
+            "includePath": [
+                "c:/Users/hari2/OneDrive/Dev Study/C learning/File handling/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "intelliSenseMode": "windows-msvc-x64",
+            "mergeConfigurations": false,
+            "recursiveIncludes": {},
+            "compilerPath": "C:/msys64/ucrt64/bin/gcc.exe",
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true
+            }
+        },
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "intelliSenseMode": "windows-msvc-x64",
+            "compilerPath": "C:/msys64/ucrt64/bin/gcc.exe"
+        }
+    ],
+    "version": 4
+}
